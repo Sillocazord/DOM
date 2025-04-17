@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Blusas Pretas e Brancas</title>
+</head>
+<body>
+    <header><H1>Camisetas a venda, pretas e brancas</H1></header>
+
+    <main>
+        <h2>Camisetas🕶️</h2>
+        <ul>
+            <li>Camiseta Branca: R$50 <button onclick="Cliquei1()">Adicionar</button></li>
+            <li>Camiseta Preta: R$50 <button onclick="Cliquei2()">Adicionar</button></li>
+        </ul>
+
+        <h2>Carrinho:</h2>
+        <ol id="Carrinho">
+
+        </ol>
+
+        <h4 id="potato">total: </h4>
+    </main>
+    
+
+    <footer></footer>
+
+</body>
+<script>
+    const Calinho = document.getElementById
+    ("Carrinho")
+    let camisaDark = 50
+    let camisaWhite = 50
+    function Cliquei1(click = 50){
+      const camisetaAdd = document.createElement("li");
+      camisetaAdd.textContent = "Camiseta Branca R$50,00"
+      Calinho.appendChild(camisetaAdd);
+      camisaWhite++;
+    }
+    function Cliquei2(click = 50){
+        const camisetaAdd = document.createElement("li");
+      camisetaAdd.textContent = "Camiseta Preta R$50,00"
+      Calinho.appendChild(camisetaAdd);
+      camisaDark++;
+    }
+
+    const todo = document.getElementById("potato")
+     todo = camisaDark + camisaWhite;
+    document.body.main.appendChild(todo);
+
+</script>
+</html>
