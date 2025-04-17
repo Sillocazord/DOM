@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> <!--Anotações em HTML Porque eu não lembro quase nada 😭😭-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1</title>
+</head>
+<body>
+    <header> <!--Tags: São o nome e as funções de cada metodo do html(header, footer, main, h1 , h2, etc...)-->
+        <h1>Lista de tarefas</h1> <!--Tag semantica = são as tags (semanticas) usadas em pontos corretos do site. Ex : header e header, footer e footer, main e main, etc...-->
+    </header>
+
+    <main>
+         <input type="text" name="" id="tarefa" placeholder="Digite um item"> <!--ID é pra um imput(tag) unico(um identificador unico), já pra alguns imputs(ou tags) que vão ter as mesmas caracteristicas, usamos class-->
+         <button onclick="adicionarTarefa()">Adicionar</button>
+         <ul id="lista_tarefa"> <!--CalemCase, kebab-case,Snake_case-->
+           
+         </ul>
+        <h2>vamo la testar</h2>
+    
+    </main>
+
+    <footer> 
+
+        <h3>👻👻👻</h3>
+        <a href="https://github.com/">LinkDoGit</a>
+    </footer>
+
+</body>
+
+<script>    //cadastrar um item da lista
+        //1- preciso ter o valor escrito da tarefa pelo meu usuario(user)
+        function adicionarTarefa(){
+           let valorInput = document.getElementById("tarefa").value;         //document : através dele podemos acessar e manipular o js //getElementById: seleciona o item pelo id, o item é inserido dentro dos parenteses        
+           console.log(valorInput);
+           let itemLista = document.createElement("li"); //createElement(): cria uma tag, dentro dos parenteses deve ser colocado o nome da tag que você quer criar
+                itemLista.innerText = valorInput
+            //2- criar a tarefa na lista
+            if (valorInput === ""){
+                alert("Meu fí quer bolacha, insira certo o item");
+            } else if (valorInput === " ")
+            {
+                alert("Meu fí quer bolacha, insira certo o item");
+            } 
+            else {
+                document.getElementById("lista_tarefa").appendChild(itemLista)
+            }
+            //Botão de excluir
+            let botaoExcluir = document.createElement("button"); //nome da tag dentro de crate element
+            botaoExcluir.innerText = "Remover Item";
+            itemLista.appendChild(botaoExcluir);
+
+            //4- Ao clicar no botão, excluir o item e o botão junto (Rock Button)
+            botaoExcluir.onclick = function(){
+                itemLista.remove();
+                                        //botaoExcluir : variavel botao exclur
+                                        //.onclick: ao clicar
+                                        //() =>: arrow function (indicando uma função), cria uma função(igual o function)
+                                        //itemLista.remove(): remove o item da itemLista (remove o botão também)
+        } //botaoExcluir.onclick = () => {itemLista.remove();}
+     }
+
+</script>
+
+</html>
